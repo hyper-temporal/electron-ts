@@ -13,7 +13,6 @@ export class IpcService {
     if (!request.responseChannel) {
       request.responseChannel = `${channel}_response_${new Date().getTime()}`
     }
-
     const ipcRenderer = this.ipcRenderer;
     ipcRenderer.send(channel, request);
 
